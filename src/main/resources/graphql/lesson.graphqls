@@ -1,0 +1,12 @@
+scalar Long
+
+type Lesson {
+    id: ID!
+    lessonTitle: String!
+    pages: [Page]
+}
+
+extend type Query {
+    findAllLessons: [Lesson]!
+    countLessons: Long!
+}
